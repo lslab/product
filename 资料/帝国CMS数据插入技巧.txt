@@ -1,0 +1,7 @@
+找到e/admin/ecmsinfo.php文件
+给
+AddNews($_POST,$logininid,$loginin);
+加个循环就可以了。循环多少次，自己看着办。  
+
+
+AddNews函数在以下文件：\e\class\hinfofun.php

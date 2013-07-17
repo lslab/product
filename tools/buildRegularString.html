@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.caretInsert.js"></script>
+<script language="javascript">
+
+
+function InsertString(id, value){
+var o = document.getElementById(id);
+o.focus();
+if(document.selection) document.selection.createRange().text = value;
+else o.value = o.value.substr(0, o.selectionStart) + value + o.value.substr(o.selectionEnd);
+}
+
+function replaceReg(name){
+	var s = $('#'+name).val();
+	s=s.replace(/\\/g,"\\\\");
+	s=s.replace(/\$/g,"\\$");
+	s=s.replace(/\(/g,"\\(");
+	s=s.replace(/\)/g,"\\)");
+	s=s.replace(/\*/g,"\\*");
+	s=s.replace(/\+/g,"\\+");
+	s=s.replace(/\./g,"\\.");
+	s=s.replace(/\[/g,"\\[");
+	s=s.replace(/\]/g,"\\]");
+	s=s.replace(/\?/g,"\\?");
+	s=s.replace(/\^/g,"\\^");
+	s=s.replace(/\{/g,"\\{");
+	s=s.replace(/\}/g,"\\}");
+	s=s.replace(/\|/g,"\\|");
+	s=s.replace(/~/g,"\\~");
+	s=$.trim(s);
+	s="~" + s + "~";
+	$('#'+name).val(s);
+}
+
+
+</script>
+<title>转化正则字符串</title>
+</HEAD>
+<BODY>
+
+      <textarea name="regular" id="regular" style="width:100%; height:100px" ></textarea>
+      <br>
+<span style="cursor:hand; color:#0000FF" onClick="replaceReg('regular')">转义$()*+.[]?\^{}|</span>
+                 <span style="cursor:hand; color:#FF0000" id="getvalue">(.*?)</span>
+<span style="cursor:hand; color:#0000FF" id="anyvalue">.*?</span>
+<span style="cursor:hand; color:#FF0000" id="numvalue">\d+</span>
+<span style="cursor:hand; color:#0000FF" id="spacevalue">\s+</span>
+ 
+<script language="JavaScript" type="text/javascript"> 
+(function($){ 
+$('#regular').setCaret(); 
+$('#getvalue').click(function(){ $('#regular').insertAtCaret('(.*?)'); }); 
+$('#anyvalue').click(function(){ $('#regular').insertAtCaret('.*?'); }); 
+$('#numvalue').click(function(){ $('#regular').insertAtCaret("\\d+"); }); 
+$('#spacevalue').click(function(){ $('#regular').insertAtCaret("\\s+"); }); 
+
+}) ($); 
+
+</script> 
+</BODY>
+</HTML>

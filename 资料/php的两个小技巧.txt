@@ -1,0 +1,75 @@
+1、防止自动任务重复运行
+
+在一个项目中，经常会使用自动任务执行某些无人值守的操作。有些任务需要频繁的触发，比如一分钟触发一次，经常遇上一种情况，上一分钟触发的任务没有执行完，脚本还在运行中，但是下一次任务已经触发，在这种情况及其容易产生冲突。
+
+最开始的时候，我的解决方法是启动任务时，创建一个文件，任务结束时，删除这个文件，每次启动任务都先检查这个文件是否存在，如果存在就说明有其他任务在运行，本次任务立即终止。
+
+<?php
+
+$lock = 'path/to/file';
+
+if(is_file($lock)){
+
+exit('another proccess is running');
+
+}
+
+file_put_contents($lock, '1');
+
+//your job
+
+...
+
+unlink($lock);
+
+重复执行的问题得到解决，但是如果进程没有正常退出，没有执行unlink($lock)，除非人为干预，否则任务永远启动不起来。这时，可以对以上代码进行改进
+
+<?php
+
+$lock = 'path/to/file';
+
+$fp = fopen($lock, 'c');
+
+if(!flock($lock, LOCK_EX | LOCK_UB)){
+
+exit('another proccess is running');
+
+}
+
+//your job
+
+...
+
+利用php内部事项的排斥锁锁住文件，当进程结束时，自动放弃对文件的锁，不论执行任务的进程是否正常退出，下一次任务都能正常启动，并且能够防止重复执行。
+
+关于fopen的"c"打开方式和文件锁，可以看php手册。
+
+2、命令行下的标准输入
+
+<?php
+
+$fp = fopen('/path/to/file', 'r');
+
+while($line = fgets($fp)){
+
+....
+
+}
+
+如果仅仅是临时处理一个文件，有一种更简洁的写法
+
+<?php
+
+while($line = fgets(STDIN)){
+
+...
+
+}
+
+将文件保存为x.php，在linux上执行命令
+
+cat /path/to/file | /path/to/php x.php
+
+在windows上
+
+type /path/to/file | /path/to/php x.php 

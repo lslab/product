@@ -1,0 +1,8 @@
+安装说明：
+1、打开config.php，按文内提示修改mysql用户名、密码等信息
+2、上传所有文件
+3、安装
+假设，采集程序安装在http://xxx.com/caiji/目录下面
+访问http://xxx.com/caiji/index.php?r=install
+按提示安装
+4、完成

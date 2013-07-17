@@ -1,0 +1,1 @@
+E:\wamp\bin\mysql\mysql5.5.24\bin\mysqldump.exe --default-character-set=gbk -uroot 597 > D:\Product\597\dbbackup.sql

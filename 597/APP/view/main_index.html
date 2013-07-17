@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$title}</title>
+<style>
+.t2{ border-collapse:collapse; border: 1px solid #06c; }
+.t2 td{border:1px solid #cccccc; }
+</style>
+</head>
+
+<body>
+{include header.html}
+{$time}
+
+<?php echo 'hello';?>
+<h1>User List</h1>
+<p><a href="?r=.add">Add User</a></p>
+<table class="t2">
+  <tr>
+    <td bgcolor="#CCCCCC"><strong>UID</strong></td>
+    <td bgcolor="#CCCCCC"><strong>Username</strong></td>
+    <td bgcolor="#CCCCCC"><strong>Password</strong></td>
+    <td bgcolor="#CCCCCC"><strong>Email</strong></td>
+    <td bgcolor="#CCCCCC"><strong>Created</strong></td>
+    <td bgcolor="#CCCCCC"><strong>Modified</strong></td>
+    <td bgcolor="#CCCCCC"><strong>Actions</strong></td>
+  </tr>
+  <tr>
+{loop $members as $m}
+    <td><a href="?r=.show&amp;uid={$m['uid']}">"{$m.uid}"
+    </a>
+    </td>
+    <td>{$m.username}</td>
+    <td>{$m.password}</td>
+    <td>{$m.email}</td>
+    <td>{date('Y-m-d H:i:s',$m.created)}</td>
+    <td>{date('Y-m-d H:i:s',$m.modified)}</td>
+    <td><a href="?r=.edit&amp;uid={$m['uid']}">Edit</a> <a href="?r=.delete&amp;uid={$m.uid}">Delete</a></td>
+  </tr>
+{/loop}
+</table>
+<div>{$this->expendTime()}(s)</div>
+</body>
+</html>

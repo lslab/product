@@ -1,0 +1,9 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{SCRIPT_FILENAME} !^admin.php
+    #以下一行排除扩展名为css的文件
+    RewriteCond %{SCRIPT_FILENAME} !.css
+    RewriteCond %{SCRIPT_FILENAME} !.js
+    #RewriteCond %{SCRIPT_FILENAME} !^do.php
+    RewriteRule (.*)$ do.php?$1 [QSA,L]
+</IfModule>

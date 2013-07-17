@@ -1,0 +1,55 @@
+
+
+
+'ChannelID'	=>	'2',
+'UserVouch'	=>	'0',
+'UserOrgan'	=>	'0',
+'regtype'	=>	'0',
+'emailname'	=>	'109918716',
+'emaillist'	=>	'@qq.com',
+'useremail'	=>	'109918716@qq.com',
+'usermobile'	=>	'',
+'mobilecode'	=>	'',
+'userpass'	=>	'pass1234',
+'password'	=>	'pass1234',
+'usernick'	=>	'eyes',
+'marriage'	=>	'0',
+'usersex'	=>	'1',
+'year'	=>	'1989',
+'month'	=>	'8',
+'day'	=>	'21',
+'height'	=>	'160',
+'education'	=>	'5',
+'income'	=>	'2',
+'province'	=>	'46',
+'city'	=>	'4602',
+'area'	=>	'0',
+'usernote'	=>	'这家伙很懒，什么也没有留下',
+'mchar'	=>	'1000',
+'note_1'	=>	'',
+'note_2'	=>	'',
+'note_3'	=>	'',
+'note_4'	=>	'',
+'usertag'	=>	'喜欢开放的',
+'usertag'	=>	'喜欢保守',
+'usertag'	=>	'喜欢激情的',
+'readme'	=>	'1',
+'x'	=>	'56',
+'y'	=>	'31'
+
+
+
+QQ号
+http://www.sheuw.com/users/profile.asp?action=save&fieldvalue=9999999888&fieldname=rel_qq&typeid=2
+手机号：
+http://www.sheuw.com/users/profile.asp?action=save&fieldvalue=13062632131&fieldname=rel_mobile&typeid=1
+体重：
+http://www.sheuw.com/users/profile.asp?action=save&fieldvalue=115&fieldname=vis_weight&typeid=0
+体形：
+丰满
+http://www.sheuw.com/users/profile.asp?action=save&fieldvalue=%u4E30%u6EE1&fieldname=vis_shape&typeid=6
+http://www.sheuw.com/users/profile.asp?action=save&fieldvalue=%u7626&fieldname=vis_shape&typeid=6
+http://www.sheuw.com/users/profile.asp?action=save&fieldvalue=%u8F83%u7626&fieldname=vis_shape&typeid=6
+http://www.sheuw.com/users/profile.asp?action=save&fieldvalue=%u5300%u79F0&fieldname=vis_shape&typeid=6
+http://www.sheuw.com/users/profile.asp?action=save&fieldvalue=%u82D7%u6761&fieldname=vis_shape&typeid=6
+http://www.sheuw.com/users/profile.asp?action=save&fieldvalue=%u9AD8%u6311&fieldname=vis_shape&typeid=6

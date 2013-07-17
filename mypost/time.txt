@@ -1,0 +1,72 @@
+2013-06-08 11:55:49
+Loing succeed	4.838051 s
+Expend time: 270.031262 s
+
+2013-06-08 12:00:21
+Loing succeed	5.414494 s
+Expend time: 276.537686 s
+
+2013-06-08 12:04:57
+Loing succeed	4.498329 s
+2013-06-08 12:10:56
+Loing succeed	8.992333 s
+2013-06-08 12:14:06
+Loing succeed	2.959009 s
+2013-06-08 12:16:13
+Loing succeed	3.173664 s
+2013-06-08 12:16:42
+Loing succeed	2.93907 s
+Expend time: 315.241209 s
+
+2013-06-08 12:22:00
+Loing succeed	5.457765 s
+Expend time: 274.819644 s
+
+2013-06-08 12:26:34
+Loing succeed	3.490525 s
+Expend time: 343.291475 s
+
+2013-06-08 12:32:17
+Loing succeed	3.095414 s
+Expend time: 305.363868 s
+
+2013-06-08 12:37:22
+Loing succeed	3.15489 s
+Expend time: 273.367702 s
+
+2013-06-08 12:41:56
+Loing succeed	3.515246 s
+Expend time: 0.949549 s
+
+Expend time: 0.889957 s
+
+Expend time: 0.997974 s
+
+Expend time: 0.892924 s
+
+Expend time: 0.910728 s
+
+2013-06-16 00:58:17
+Loing succeed	2.873292 s
+2013-06-16 00:58:30
+Loing succeed	3.581051 s
+2013-06-16 00:59:05
+Loing succeed	2.861406 s
+2013-06-16 00:59:23
+Loing succeed	2.804232 s
+2013-06-16 01:15:55
+Loing succeed	2.865072 s
+2013-06-16 01:17:36
+Loing succeed	2.959639 s
+2013-06-16 01:19:45
+Loing succeed	2.926802 s
+2013-06-16 01:20:45
+Loing succeed	3.500658 s
+2013-06-16 01:26:01
+Loing succeed	2.860874 s
+2013-06-16 01:27:05
+Loing succeed	2.83114 s
+2013-06-16 01:27:41
+Loing succeed	2.806351 s
+2013-06-18 16:15:25
+Loing succeed	3.45879 s

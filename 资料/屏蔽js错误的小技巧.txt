@@ -1,0 +1,12 @@
+屏蔽js错误的小技巧
+关键字: 屏蔽js错误的小技巧 
+屏蔽js错误的小技巧 
+<script language="javascript"> 
+<!-- 
+/*屏蔽所有的js错误*/ 
+function killerrors() { 
+return true; 
+} 
+window.onerror = killerrors; 
+//--> 
+</script> 
